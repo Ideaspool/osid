@@ -14,10 +14,10 @@ if (isset($_POST['WriteImage'])) {
     foreach ($_POST['Device'] as &$DeviceName) {
         
         //put device into variable for use in dcfldd command
-        $DeviceList .= "of=/dev/" . $DeviceName . " ";
+        $DeviceList .= "of=/dev/r" . $DeviceName . " ";
         
         //put device into variable for unmounting of drives
-        $UmountList .= "/usr/bin/umount /dev/" . $DeviceName . " & ";
+        $UmountList .= "/usr/bin/umount /dev/r" . $DeviceName . " & ";
         
     } //END create device list from checkbox array
     
